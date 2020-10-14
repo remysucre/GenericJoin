@@ -135,7 +135,7 @@ fn main() {
 
     let graph = Rc::new(RefCell::new(triangle));
 
-    let mut v = vec![0, 1, 2];
+    let mut v = vec![0, 1];
 
     let ext_b = vec![(graph.clone(), Box::new(|a: &u64| { *a }) as Box<dyn Fn(&u64) -> u64 + 'static>)];
     let pairs = GenericJoinExt::extend(&mut v, ext_b);
